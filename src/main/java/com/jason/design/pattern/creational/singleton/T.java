@@ -8,7 +8,8 @@ public class T implements Runnable {
 
   @Override
   public void run() {
-    LazySingletonPlus lazySingleton = LazySingletonPlus.getInstance();
-    System.out.println(Thread.currentThread().getName() + " " + lazySingleton);
+//    LazySingletonPlus lazySingleton = LazySingletonPlus.getInstance();
+    ThreadLocalInstance instance = ThreadLocalInstance.getInstance();
+    System.out.println(Thread.currentThread().getName() + " " + instance);
   }
 }
